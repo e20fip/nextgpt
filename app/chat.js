@@ -12,12 +12,13 @@ export default function Chat() {
     <div id="main">
       <div className="output">
         {messages.map((m, index) => (
-          <div key={index}>
-            <div className="info">
-              {m.role === "user" ? "User : " : "AI : "}
+          <div key={index} className="chat-box">
+            <div className="info" style={{ order: m.role === "user" ? 1 : 2 }}>
+              <p>{m.role === "user" ? "User" : "AI"}</p>
             </div>
             <div
               className="content"
+              style={{ order: m.role === "user" ? 2 : 1 }}
               dangerouslySetInnerHTML={{
                 __html: converter.makeHtml(m.content)
               }}

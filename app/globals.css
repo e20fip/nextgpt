@@ -17,7 +17,7 @@ body {
   background: linear-gradient(
     312deg,
     rgba(146, 179, 210, 1) 0%,
-    rgba(0, 67, 126, 1) 100%
+    rgb(16, 143, 101) 100%
   );
 }
 ::-webkit-scrollbar {
@@ -62,8 +62,8 @@ body {
   overflow: auto;
   background-color: rgb(48 48 48 / 64%);
 }
-.output ul,
-.output ol {
+.content ul,
+.content ol {
   padding-bottom: 1rem;
   list-style-position: inside;
 }
@@ -77,12 +77,12 @@ ul p,
 ol p {
   display: contents;
 }
-.output li {
-  padding-block: 1rem;
+.content li {
+  padding-block: 0.5rem;
 }
-.output p,
-.output pre {
-  padding-bottom: 1rem;
+.content p,
+.content pre {
+  padding-block: 0.2rem;
 }
 form {
   display: flex;
@@ -134,10 +134,26 @@ button:focus {
   color: red;
 }
 .content {
-  padding: 1.2em;
+  padding: 0.5em;
+  background-color: cadetblue;
+  border-radius: 5px;
+  width: 90%;
 }
 .info {
-  font-style: italic;
-  font-size: 0.8rem;
   color: #85d7ff;
+  padding: 0.5em;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  padding-bottom: 1.1em;
 }
